@@ -15,7 +15,7 @@ class FormController extends Controller
         // Make sure that code does not duplicate
         while(true) {
             $code = Str::random(20);
-            if(!RegisterCode::where('code', $code)->exists())
+            if(!RegisterCode::where(['code' => $code, 'status' => true])->exists())
                 break;
         }
         // Save register code to DB
