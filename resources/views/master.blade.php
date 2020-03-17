@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    @yield('top-css')
+    @yield('top-script')
     <script src="https://unpkg.com/feather-icons"></script>
     <title>Multi Submit - @yield('title')</title>
 </head>
@@ -22,5 +24,6 @@
 <script>
     feather.replace()
 </script>
+@yield('bot-script')
 </body>
 </html>
